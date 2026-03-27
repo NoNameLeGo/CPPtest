@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="VRCharacter.vcxproj" Id="4f9ad0bf-83c9-46d2-902e-dcf8e706f25d" />
+  <Project Path="VRCharacter.vcxproj" />
 </Solution>

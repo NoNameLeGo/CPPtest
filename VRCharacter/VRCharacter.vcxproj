@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{4f9ad0bf-83c9-46d2-902e-dcf8e706f25d}</ProjectGuid>
+    <ProjectGuid>{691e3439-d81b-460d-8862-0b3a0e759ab5}</ProjectGuid>
     <RootNamespace>VRCharacter</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="VRCharacter.cpp" />
   </ItemGroup>
   <ItemGroup>
