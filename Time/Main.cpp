@@ -12,7 +12,9 @@ private:
 public:
 	void setTime();
 	void showTime();
-	Time(){
+	Time() :hours(0), minutes(0), seconds(0) {}
+	Time(int h, int m, int s) : hours(h), minutes(m), seconds(s) {}
+	/*Time() {
 		hours = 0;
 		minutes = 0;
 		seconds = 0;
@@ -21,7 +23,7 @@ public:
 		hours = h;
 		minutes = m;
 		seconds = s;
-	}
+	}*/
 
 };
 
