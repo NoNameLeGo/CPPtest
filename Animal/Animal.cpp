@@ -4,10 +4,13 @@
 using namespace std;
 
 class Animal {
-public:
+private:
     string name;
 
+public:
     Animal(string n) : name(n) {}
+    
+    string getName() const { return name; }
 };
 
 class Mammal : virtual public Animal {
@@ -44,9 +47,9 @@ public:
 
 int main()
 {
-    Bat bat("小蝙蝠", "棕色", "灰色", "膜翼");
+    Bat bat("蝙蝠", "棕色", "灰色", "膜翼");
     
-    cout << "\n直接访问 name: " << bat.name << endl;
+    cout << "\n直接访问 name: " << bat.getName() << endl;
     bat.display();
 
     return 0;
