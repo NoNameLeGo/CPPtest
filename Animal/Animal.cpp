@@ -10,7 +10,9 @@ private:
 public:
     Animal(string n) : name(n) {}
     
-    string getName() const { return name; }
+    string getName() const { 
+        return name; 
+    }
 };
 
 class Mammal : virtual public Animal {
@@ -30,26 +32,22 @@ public:
 };
 
 class Bat : public Mammal, public Bird {
-private:
-    string wing_type;
-
 public:
-    Bat(string n, string fc, string fyc, string wt) 
-        : Animal(n), Mammal(n, fc), Bird(n, fyc), wing_type(wt) {}
+    Bat(string n, string fc, string fyc) 
+        : Animal(n), Mammal(n, fc), Bird(n, fyc) {}
 
     void display() {
-        cout << "名字：" << name << endl;
+        cout << "名字：" << getName() << endl;
         cout << "毛发颜色：" << fur_color << endl;
         cout << "羽毛颜色：" << feather_color << endl;
-        cout << "翅膀类型：" << wing_type << endl;
     }
 };
 
 int main()
 {
-    Bat bat("蝙蝠", "棕色", "灰色", "膜翼");
+    Bat bat("小蝠", "棕色", "黑色");
     
-    cout << "\n直接访问 name: " << bat.getName() << endl;
+    cout << "\n直接访问\n name: " << bat.getName() << endl << endl;
     bat.display();
 
     return 0;
