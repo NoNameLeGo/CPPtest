@@ -54,7 +54,7 @@ int main() {
     Student* pt = &stud1;                      // 定义指向基类对象的指针变量 pt，指向 stud1
     pt->display();                             // 输出 Student(基类) 对象 stud1 中的数据
     pt = &grad1;                               // pt 指向 Graduate 类对象 grad1
-    pt->display();                             // 希望输出 Graduate 类对象 grad1 中的数据
+    pt->display();                             // 静态绑定：实际调用的是 Student::display() 而非 Graduate::display()
     
     return 0;
 }

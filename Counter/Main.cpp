@@ -1,33 +1,14 @@
-﻿#include<string>
-#include <iostream>
+﻿#include <iostream>
+#include "Counter.h"
 using namespace std;
-
-class Counter {
-private:
-	int count;
-public:
-	Counter() {
-		count = 0;
-	}
-	void increment() {
-		count++;
-	}
-	void decrement() {
-		count--;
-	}
-	int getCount() {
-		cin >> count;
-		return count;
-	}
-};
 
 int main()
 {
 	Counter counter;
-	counter.getCount();
+	counter.increment();
 	counter.increment();
 	counter.decrement();
-
+	cout << "当前计数: " << counter.getCount() << endl;
 
 	return 0;
 }
