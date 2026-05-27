@@ -6,12 +6,7 @@ const double PI = 3.14159;
 int area(int a)
 {
 	while (a < 0) {
-		if (a > 0) {
-			break;
-		}
-		else {
-			cout << "输入错误！请输入正整数" << endl;
-		}
+		cout << "输入错误！请输入正整数" << endl;
 		cin >> a;
 	}
     return a * a;
@@ -20,12 +15,7 @@ int area(int a)
 int area(int a, int b)
 {
 	while (a < 0 || b < 0) {
-		if (a > 0 && b > 0) {
-			break;
-		}
-		else {
-			cout << "输入错误！请输入正整数" << endl;
-		}
+		cout << "输入错误！请输入正整数" << endl;
 		cin >> a >> b;
 	}
     return a * b;
@@ -34,12 +24,7 @@ int area(int a, int b)
 float area(float r)
 {
 	while (r < 0) {
-		if (r > 0) {
-			break;
-		}
-		else {
-			cout << "输入错误！请输入正整数" << endl;
-		}
+		cout << "输入错误！请输入正整数" << endl;
 		cin >> r;
 	}
     return PI * r * r;

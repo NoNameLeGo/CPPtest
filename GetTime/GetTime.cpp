@@ -5,8 +5,9 @@ using namespace std;
 
 class Time
 {
-private:
+public:
     int hour;
+private:
     int minute;
     int second;
 public:
@@ -24,7 +25,7 @@ int main()
 	//定义指向整形数据的指针变量p1，并使p1指向t1.hour
 	int *p1 = &t1.hour;
 	//输出p1所指的数据成员t1.hour
-	cout << *p1 << end1;
+	cout << *p1 << endl;
 	//调用对象t1的成员函数get_time
 	t1.get_time();
 	//定义指向Time类对象的指针变量p2，并使p2指向t1

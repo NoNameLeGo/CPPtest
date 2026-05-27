@@ -16,7 +16,6 @@ public:
 		count--;
 	}
 	int getCount() {
-		cin << "Count: " << count << endl;
 		return count;
 	}
 };
