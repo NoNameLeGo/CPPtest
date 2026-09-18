@@ -8,23 +8,21 @@ class SeqList
 public:
     SeqList();
     SeqList(DataType a[], int n);
-    void Insert(int i, DataType x);             // 指定位序插入
-    DataType Delete(int i);                     // 指定位序删除
-    int Locate(DataType x);                     // 按值查找，返回位序，找不到返回0
-    void PrintList();                           // 遍历输出顺序表
+    void Insert(int i, DataType x);
+    DataType Delete(int i);
+    int Locate(DataType x);
+    void PrintList();
 private:
     DataType data[MaxSize];
     int length;
 };
 
-// 默认构造
 template <typename DataType>
 SeqList<DataType>::SeqList()
 {
     length = 0;
 }
 
-// 批量构造函数
 template <typename DataType>
 SeqList<DataType>::SeqList(DataType a[], int n)
 {
@@ -39,7 +37,6 @@ SeqList<DataType>::SeqList(DataType a[], int n)
     length = n;
 }
 
-// 在位序i插入元素x
 template <typename DataType>
 void SeqList<DataType>::Insert(int i, DataType x)
 {
@@ -61,7 +58,6 @@ void SeqList<DataType>::Insert(int i, DataType x)
     length++;
 }
 
-// 删除位序i元素，返回被删值
 template <typename DataType>
 DataType SeqList<DataType>::Delete(int i)
 {
@@ -80,7 +76,6 @@ DataType SeqList<DataType>::Delete(int i)
     return val;
 }
 
-// 按值查找
 template <typename DataType>
 int SeqList<DataType>::Locate(DataType x)
 {
@@ -94,7 +89,6 @@ int SeqList<DataType>::Locate(DataType x)
     return 0;
 }
 
-// 打印顺序表
 template <typename DataType>
 void SeqList<DataType>::PrintList()
 {
@@ -106,7 +100,6 @@ void SeqList<DataType>::PrintList()
     cout << endl;
 }
 
-// 菜单模块
 void ShowMenu()
 {
     cout << "\n=====顺序表操作菜单=====" << endl;
@@ -119,7 +112,6 @@ void ShowMenu()
 
 int main()
 {
-    // 内置初始5个元素：1,3,5,7,9
     int arr[] = { 1, 3, 5, 7, 9 };
     int n = sizeof(arr) / sizeof(arr[0]);
     SeqList<int> L(arr, n);

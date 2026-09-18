@@ -6,25 +6,23 @@ template <typename DataType>
 class SeqList
 {
 public:
-    SeqList();                                  // 默认构造，初始化空表
-    SeqList(DataType a[], int n);               // 批量数组初始化
-    void Insert(int i, DataType x);             // 在第i个位序插入x
-    DataType Delete(int i);                     // 删除第i个位序元素，返回被删的值
-    int Locate(DataType x);                     // 按值查找，返回位序，找不到返回0
-    void PrintList();                           // 遍历输出顺序表
+    SeqList();
+    SeqList(DataType a[], int n);
+    void Insert(int i, DataType x);
+    DataType Delete(int i);
+    int Locate(DataType x);
+    void PrintList();
 private:
     DataType data[MaxSize];
     int length;
 };
 
-// 默认构造函数
 template <typename DataType>
 SeqList<DataType>::SeqList()
 {
     length = 0;
 }
 
-// 批量构造函数
 template <typename DataType>
 SeqList<DataType>::SeqList(DataType a[], int n)
 {
@@ -39,7 +37,6 @@ SeqList<DataType>::SeqList(DataType a[], int n)
     length = n;
 }
 
-// 位序i处插入元素x，i从1开始
 template <typename DataType>
 void SeqList<DataType>::Insert(int i, DataType x)
 {
@@ -53,7 +50,6 @@ void SeqList<DataType>::Insert(int i, DataType x)
         cout << "插入位置非法！" << endl;
         return;
     }
-    // 元素后移
     for (int j = length; j >= i; j--)
     {
         data[j] = data[j - 1];
@@ -62,7 +58,6 @@ void SeqList<DataType>::Insert(int i, DataType x)
     length++;
 }
 
-// 删除位序i的元素，返回被删除的值
 template <typename DataType>
 DataType SeqList<DataType>::Delete(int i)
 {
@@ -73,7 +68,6 @@ DataType SeqList<DataType>::Delete(int i)
         return -1;
     }
     val = data[i - 1];
-    // 元素前移
     for (int j = i; j < length; j++)
     {
         data[j - 1] = data[j];
@@ -82,7 +76,6 @@ DataType SeqList<DataType>::Delete(int i)
     return val;
 }
 
-// 按值查找，返回位序；不存在返回0
 template <typename DataType>
 int SeqList<DataType>::Locate(DataType x)
 {
@@ -96,7 +89,6 @@ int SeqList<DataType>::Locate(DataType x)
     return 0;
 }
 
-// 遍历打印
 template <typename DataType>
 void SeqList<DataType>::PrintList()
 {
@@ -110,7 +102,6 @@ void SeqList<DataType>::PrintList()
 
 int main()
 {
-    // 初始7个元素
     int arr[] = { 10, 20, 30, 40, 50, 60, 70 };
     int n = sizeof(arr) / sizeof(arr[0]);
     SeqList<int> L(arr, n);
@@ -118,18 +109,15 @@ int main()
     cout << "【初始顺序表】" << endl;
     L.PrintList();
 
-    // 在第3个位序插入99
     cout << "\n【在位序3插入元素99】" << endl;
     L.Insert(3, 99);
     L.PrintList();
 
-    // 删除第5个位序元素
     cout << "\n【删除位序5的元素】" << endl;
     int delVal = L.Delete(5);
     cout << "被删除元素：" << delVal << endl;
     L.PrintList();
 
-    // 按值查找元素60
     cout << "\n【查找元素60】" << endl;
     int pos = L.Locate(60);
     if (pos != 0)
