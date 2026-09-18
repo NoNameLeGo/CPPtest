@@ -74,6 +74,14 @@
 | [VRExperience](./VRExperience) | VR 体验 — 体验流程建模 |
 | [VRWeapon](./VRWeapon) | VR 武器 — 武器系统设计 |
 
+### 📊 数据结构
+
+| 项目 | 描述 |
+|------|------|
+| [SeqListBasic](./SeqListBasic) | 顺序表基础 — 静态数组模拟、初始化、批量赋值与遍历 |
+| [SeqListOps](./SeqListOps) | 顺序表核心操作 — 指定位置插入、删除、按值查找、元素移动观察 |
+| [SeqListMenu](./SeqListMenu) | 顺序表综合应用 — 菜单驱动、模块化函数设计 |
+
 ### 📁 文件 I/O
 
 | 项目 | 描述 |
