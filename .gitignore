@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# 项目自定义：编译产物与程序运行输出
+*.exe
+data.txt
+vr_scene.dat
